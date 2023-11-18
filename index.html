@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irregular Verbs App</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+		<nav>
+            <div class="navbar">
+                <i class='bx bx-menu'></i>
+                <div class="logo"><a href="#verbsTable">Irregular Verbs App</a></div>
+                  <div class="nav-links">
+                    <div class="sidebar-logo">
+                      <i class='bx bx-x' ></i>
+                    </div>
+                    <ul class="links">
+                      <li><a href="#verbsTable">HOME</a></li>
+                      <li><a href="#quizPS">QUIZ</a></li>
+                    </ul>
+                  </div>
+                <div class="search-box" style="visibility: hidden;">
+                    <i class='bx bx-search'></i>
+                    <div class="input-box">
+                        <input type="text" placeholder="Search...">
+                    </div>
+                </div>
+                <div id="searchSection">
+                    <input type="text" id="searchInput" placeholder="Search Verbs">
+                    <button onclick="searchVerb()" class="btnSearch">Search</button>
+                    <p id="searchResult"></p>
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+    <main>        
+        <div class="table-wrapper">
+            <h2>Irregular Verbs List</h2>
+            <select id="verbCategory">
+                <option value="all">All</option>
+                <option value="never_change">Never change</option>
+                <option value="en">Ends with 'en'</option>
+                <option value="ght">Ends with 'ght'</option>
+                <option value="rn">Ends with 'rn'</option>
+                <option value="wn">Ends with 'wn'</option>
+                <option value="ne">Ends with 'ne'</option>
+                <option value="id">Ends with 'id'</option>
+                <option value="de">Ends with 'de'</option>
+                <option value="ld">Ends with 'ld'</option>
+                <!-- Add more options based on your categories -->
+            </select>
+            <table id="verbsTable" class="fl-table">
+                <thead>
+                    <tr>
+                        <th>Verb</th>
+                        <th>Past Simple</th>
+                        <th>Past Participle</th>
+                    </tr>
+                </thead>
+                <tbody id="searchResultTable">
+                    <!-- Verbs will be added dynamically using JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        <div id="quizPS">
+            <h2>Irregular Verbs Quiz(Past Simple)</h2>
+            <p id="questionPS" top="PS"></p>
+            <input type="text" id="userAnswerPS" placeholder="Enter the past simple">
+            <button onclick="checkAnswerPS()">Submit Answer</button>
+            <p id="quizFeedbackPS"></p>
+        </div>
+        <div id="quizPP">
+            <h2>Irregular Verbs Quiz(Past Participle)</h2>
+            <p id="questionPP"></p>
+            <input type="text" id="userAnswerPP" placeholder="Enter the past participle">
+            <button onclick="checkAnswerPP()">Submit Answer</button>
+            <p id="quizFeedbackPP"></p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Irregular Verbs App</p>
+        <p>Made by LAGRIDI Yasser</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
